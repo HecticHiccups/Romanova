@@ -1,25 +1,64 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+<<<<<<< HEAD
   <title>My first API</title>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"> </script> 
 <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
  <script type="text/javascript" src="keys.js"></script>
   <script type="text/javascript" src="index.js"></script>
+=======
+    <meta charset="utf-8">
+    <title>Romanova</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600|Orbitron:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="keys.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+>>>>>>> 9203fb54855e805b0f6fc72b32495c2ef8608b19
 </head>
+
 <body>
+    <div class="nav">
+        <h3>#AI Hacks</h3>
+        <img src="images/leg-ham.jpg">
+    </div>
+
+    <div class="title">
+        <div class="content">
+            <p id="paragraph">ROMANOVA</p>
+        </div>
+    </div>
 
 
+    <div class="summary">
+        <h1 id="Filetitle">Upload Candidate</h1>
 
+            <div class="custom-file-upload">
+                <!--<label for="file">File: </label>-->
+                <input type="file" id="file" name="myfiles[]" multiple />
+            </div>
+
+<<<<<<< HEAD
 <div>
     <input type="text" id="imgurl" placeholder="Image URL"/>
     <button onclick="run2(document.getElementById('imgurl').value)">Get tags!</button>
 </div>
+=======
+    </div>
+    <div>
+        <input type="text" id="imgurl" placeholder="Image URL"/>
+        <button onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
+    </div>
+>>>>>>> 9203fb54855e805b0f6fc72b32495c2ef8608b19
 
+    <div id="results">
+        <p>
 
-<div id="tags"></div>
 
 <ul id="taglist">
    
@@ -27,5 +66,21 @@
     
 </ul>
 
+        </p>
+
+
+    </div>
+
+
+    <div class="team">
+        <h1>Team</h1>
+        <ul>
+            <li><a href="https://github.com/hitscotty" target="_blank">Jonathan Portoreal</a></li>
+            <li><a href="https://github.com/HecticHiccups" target="_blank">Jesus Arteaga</a></li>
+            <li><a href="https://github.com/A-Beltran" target="_blank">Anthony Beltran</a></li>
+            <li><a href="https://github.com/soconnor129 " target="_blank">Shannon O'Connor</a></li>
+        </ul>
+    </div>
 </body>
+
 </html>

@@ -50,7 +50,7 @@ function postImage(imgurl) {
             'Authorization': 'Bearer ' + accessToken
         }
     }).then(function (r) {
-        
+
         parseResponse(r.data);
     }, function (err) {
         console.log('Sorry, something is wrong: ' + err);
@@ -82,7 +82,7 @@ function run(imgurl) {
     } else {
         console.log("yo");
         postImage(imgurl);
-        
+
     }
 }
 */
@@ -92,6 +92,7 @@ function run2(imgurl) {
         // a, b, c
         // [a,b,c]
         // {tags:[a,b,c]}
+<<<<<<< HEAD
         result = ["a", "b", "c"]
         console.log(result)
         var list = "";
@@ -101,4 +102,19 @@ function run2(imgurl) {
         $("#taglist").append(list);
     
     //})
+=======
+        str.split(',')
+
+$(document).ready(function(){
+        var list = "";
+        for(i=0; i<games.length; i++){
+        list +="<li>"+games[i]+"</li>";
+        }
+    $("#taglist").append(list);
+
+});
+
+
+    })
+>>>>>>> 9203fb54855e805b0f6fc72b32495c2ef8608b19
 }
