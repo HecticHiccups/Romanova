@@ -94,7 +94,7 @@ body{
     top: 0px;
     background:black;
     width: 100%;
-    height: 70px;
+    height: 82px;
 }
 .nav > h3{
     float: left;
@@ -106,11 +106,20 @@ body{
     height: 100%;
 }
 
+.description > h1{
+    text-align: center;
 
-p{
+    color:orange;
+    font-family: Titillium Web;
+}
+
+.description > p{
     font-size: 20px;
-    color: black;
-    font-family: Tahoma;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    color: orange;
+    font-family: Titillium Web;
 }
 
 .title {
