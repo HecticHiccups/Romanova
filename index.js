@@ -1,4 +1,4 @@
-function getCredentials(cb) {
+/* function getCredentials(cb) {
     var data = {
         'grant_type': 'client_credentials'
         , 'client_id': CLIENT_ID
@@ -85,25 +85,20 @@ function run(imgurl) {
         
     }
 }
-
+*/
 function run2(imgurl) {
-    axios.get("/model?imgUrl="+imgurl)
-    .then(function(str) {
-        console.log(str)
+    //axios.get("/model?imgUrl="+imgurl)
+    //.then(function(result) {
         // a, b, c
         // [a,b,c]
         // {tags:[a,b,c]}
-        str.split(',')
-        
-$(document).ready(function(){
+        result = ["a", "b", "c"]
+        console.log(result)
         var list = "";
-        for(i=0; i<games.length; i++){
-        list +="<li>"+games[i]+"</li>";
-        }
-    $("#taglist").append(list);
-
-});
-        
+        for(i=0; i < result.length; i++){
+            list +="<li>"+result[i]+"</li>";
+            }
+        $("#taglist").append(list);
     
-    })
+    //})
 }

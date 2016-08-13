@@ -4,7 +4,7 @@
 <head>
   <title>My first API</title>
   
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"> </script> 
 <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
  <script type="text/javascript" src="keys.js"></script>
   <script type="text/javascript" src="index.js"></script>
@@ -15,13 +15,17 @@
 
 <div>
     <input type="text" id="imgurl" placeholder="Image URL"/>
-    <button onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
+    <button onclick="run2(document.getElementById('imgurl').value)">Get tags!</button>
 </div>
 
 
 <div id="tags"></div>
 
-
+<ul id="taglist">
+   
+    
+    
+</ul>
 
 </body>
 </html>
