@@ -1,6 +1,8 @@
 @import "compass/css3";
 
 @import url("http://fonts.googleapis.com/css?family=Lato");
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Orbitron', sans-serif;
 
 $background: #e74c3c;
 $file-upload-color: #c0392b;
@@ -19,8 +21,7 @@ $file-upload-size: 300px;
 }
 #Filetitle {
     font-size: 30px;
-    font-weight: normal;
-    text-transform: uppercase;
+    font-family: Titillium Web;
     color: orange;
 }
 
@@ -97,20 +98,14 @@ body{
 }
 .nav > h3{
     float: left;
+    font-family: Titillium Web;
 }
+
 .nav > img{
     float: right;
     height: 100%;
-    width: 5%
 }
 
-#me{
-    float: left;
-    width: 10%;
-    height: 10%;
-    padding: 0px;
-    margin: 0px;
-}
 
 p{
     font-size: 20px;
@@ -119,7 +114,7 @@ p{
 }
 
 .title {
-    background-image: url("romaimages/ai.jpg");
+    background-image: url("images/ai.jpg");
     background-repeat: no-repeat;
     width: 100%;
     height: 600px;
@@ -129,12 +124,17 @@ p{
 }
 
 .content > p{
+    font-family: Orbitron;
     padding-top: 100px;
     color: orange;
     text-align: center;
-    font-size: 70px;
+    font-size: 65px;
 }
-
+.team > h1{
+    font-family: Titillium Web;
+    color: orange;
+    font-size: 30px;
+}
 h2{
     color: orange;
     font-size:30px;
@@ -143,25 +143,11 @@ h2{
 h3{
     font-size: 25px;
 }
+
 #ham:hover{
     alertMe()
 }
-.summary{
-    background-image: url("images/Blood-Moon-Thresh.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    a:link color:yellow;
-}
-.summary > h2{
-    text-align: center;
-    color: white;
-}
-.summary{
 
-}
-.summary a:visited{
-        color:yellow;
-}
 
 a:link{
     color:blue;
