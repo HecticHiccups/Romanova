@@ -11,8 +11,6 @@ app_secret = "VaVyBbyvmnpoyvOehbDjsnh284T7Nx751LkSVd5H"
 ## create our endpoint
 print "Recieving access token:\n "
 api = ApiClient(client_id=app_id, client_secret=app_secret)
-
-
 ######################################## sample images for debuggin  #################################
 img1 = Image(url='https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/cat-adult-landing-hero.ashx',
              labels=['cat'])
@@ -52,7 +50,7 @@ res = api.createModel(model_name='civilian', concept_ids=['river', 'pool', 'drib
 #Debug: print res
 
 model_id = res['model']['id']
-#Debug: print "\nModel Number: " +  model_id + "\n"
+print "\nModel Number: " +  model_id + "\n"
 
 
 api.trainModel(model_id=model_id)
@@ -67,10 +65,10 @@ civilian_img = Image(url=civilian_url)
 programmer_img = Image(url=programmer_url)
  
 ## use API to predict
-tags = api.predictModel(model_id=model_id, objs=[civilian_img])
+#tags = api.predictModel(model_id=model_id, objs=[civilian_img])
 
 #Debug: print "Tags:"
-#Debug: print json.dumps(tags, indent=4, sort_keys=True)
+#print json.dumps(tags, indent=4, sort_keys=True)
 
 ###################################################################################################################
 ## Recieve images to process
@@ -78,9 +76,9 @@ tags = api.predictModel(model_id=model_id, objs=[civilian_img])
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return "hello2"
+#@app.route('/')
+#def hello_world():
+#    return "hello2"
 
 ## Shannons get Routines
 pool = ["you are waiting for your subway car ",
@@ -98,6 +96,8 @@ dribble = ["you are going on vacation ",
            "you go to the hospital days later when you notice severe bodily changes ",
            "it is too late at this time ",
            "your body is now the breeding ground to parasites that will harvest your organs and muscles until you are no longer able to support yourself!"]
+
+programmer = ["You're pretty cool!"]
 
 # uses a tag to value dict; extracts largest value and returns the routine
 # associated with the most accurate tag
@@ -121,30 +121,31 @@ def getRoutine(tags):
         routine = river
     if max == 'dribble':
         routine = dribble
+    if max == 'computer':
+        routine = computer
 
     return routine
 
 @app.route('/model')
 def model():
     imgUrl = request.args.get('imgUrl')
-    tags = api.predictModel(model_id=model_id, objs=[imgUrl])
+    
+    tags = api.predictModel(model_id=model_id, objs=[Image(url=imgUrl)])
 
+  #  print json.dumps(tags, indent=4, sort_keys=True)
     value_dict = {}
     for tag in tags['outputs'][0]['data']['tags']:
         id = tag['concept']['id']
         value = tag['value']
         value_dict[id] = value
 
-
     routine = getRoutine(value_dict)
     
     print "We are showing the value dict"
     print value_dict
         
-    #print json.dumps(tags, indent=4, sort_keys=True)
-
    # routine = getRoutine(tags['tags']['id']
    # print json.dumps(tags , indent=4, sort_keys=True)
     
-    return json.dumps(pool)
+    return json.dumps(routine)
 
