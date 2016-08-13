@@ -87,10 +87,26 @@ def hello_world():
     return "hello2"
 
 ## Shannons get Routines
-## 
+pool = ["you are waiting for your subway car ", "a small girl chasing her brother accidently shoves you on the tracks ", "the car comes, running you over and causing an immidiete fatality ", "your blood decorates the terminal walls "]
+river = ["you have been snatched by a cannibal ", "she ties you up and flays you beginning with your neck and fingertips ", "she douses your flayed person in alcohol ", "you writhe in agony, and eventually die due to shock and infection "]
+dribble = ["you are going on vacation ", "you go swimming in a river for leisure, and contract a parasite ", "you go to the hospital days later when you notice severe bodily changes ", "it is too late at this time ", "your body is now the breeding ground to parasites that will harvest your organs and muscles until you are no longer able to support yourself "]
+
+ def get_routine(dribble):
+    if (tag0=="dribble"):
+        return dribble
+ def get_routine(pool):
+    if (tag1=="pool"):
+        return pool
+ def get_routine(river):
+    if (tag2=="river"):
+        return river         
+
 
 @app.route('/model')
 def model():
     imgUrl = request.args.get('imgUrl')
+    if (imgUrl != ""):
+        tags = api.predictModel(model_id=model_id, objs=[imgURL])
+        j = json.loads(tags)
     
-    return "hello: " + imgUrl + " \. see!"
+    return j['tags']
