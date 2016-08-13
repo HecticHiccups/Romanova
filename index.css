@@ -1,0 +1,181 @@
+@import "compass/css3";
+
+@import url("http://fonts.googleapis.com/css?family=Lato");
+
+$background: #e74c3c;
+$file-upload-color: #c0392b;
+$file-upload-size: 300px;
+
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+}
+.summary < body {
+    font-family: Lato, Arial;
+    color: white;
+    padding: 55px 25px;
+    background-color: white;
+}
+#Filetitle {
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: orange;
+}
+
+.custom-file-upload-hidden {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+}
+.custom-file-upload {
+    display: block;
+    width: auto;
+    font-size: 16px;
+    margin-top: 30px;
+    //border: 1px solid #ccc;
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+.file-upload-wrapper {
+    position: relative;
+    margin-bottom: 5px;
+    //border: 1px solid #ccc;
+}
+.file-upload-input {
+    width: $file-upload-size;
+    color: #fff;
+    font-size: 16px;
+    padding: 11px 17px;
+    border: none;
+    background-color: $file-upload-color;
+    @include transition(all 0.2s ease-in);
+    float: left; /* IE 9 Fix */
+    &:hover, &:focus {
+        background-color: darken($file-upload-color, 5);
+        outline: none;
+    }
+}
+.file-upload-button {
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    border: none;
+    margin-left: -1px;
+    background-color: darken($file-upload-color, 10);
+    float: left; /* IE 9 Fix */
+    @include transition(all 0.2s ease-in);
+    &:hover {
+        background-color: darken($file-upload-color, 20);
+    }
+}
+
+#results{
+    background-size: 500px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+.nav{
+    color: orange;
+    position: fixed;
+    top: 0px;
+    background:black;
+    width: 100%;
+    height: 70px;
+}
+.nav > h3{
+    float: left;
+}
+.nav > img{
+    float: right;
+    height: 100%;
+    width: 5%
+}
+
+#me{
+    float: left;
+    width: 10%;
+    height: 10%;
+    padding: 0px;
+    margin: 0px;
+}
+
+p{
+    font-size: 20px;
+    color: black;
+    font-family: Tahoma;
+}
+
+.title {
+    background-image: url("romaimages/ai.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    background-size: 100%;
+
+
+}
+
+.content > p{
+    padding-top: 100px;
+    color: orange;
+    text-align: center;
+    font-size: 70px;
+}
+
+h2{
+    color: orange;
+    font-size:30px;
+}
+
+h3{
+    font-size: 25px;
+}
+#ham:hover{
+    alertMe()
+}
+.summary{
+    background-image: url("images/Blood-Moon-Thresh.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    a:link color:yellow;
+}
+.summary > h2{
+    text-align: center;
+    color: white;
+}
+.summary{
+
+}
+.summary a:visited{
+        color:yellow;
+}
+
+a:link{
+    color:blue;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:visited{
+    color:grey;
+}
+a:hover{
+    color:#00ff00; background-color:transparent; text-decoration:underline}
+}
+
+
+
+
+

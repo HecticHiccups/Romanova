@@ -1,27 +1,59 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>My first API</title>
-  
+<html>
 
-<script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+<head>
+    <title>Romanova</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
  <script type="text/javascript" src="keys.js"></script>
   <script type="text/javascript" src="index.js"></script>
+
 </head>
+
 <body>
+    <div class="nav">
+        <h3>#AIhacks</h3>
+        <img src="romaimages/Hamburger.jpeg">
+    </div>
+
+    <div class="title">
+        <div class="content">
+            <p id="paragraph">Romanova</p>
+        </div>
+    </div>
+
+
+    <div class="summary">
+        <h1 id="Filetitle">Upload Candidate</h1>
+
+            <div class="custom-file-upload">
+                <!--<label for="file">File: </label>-->
+                <input type="file" id="file" name="myfiles[]" multiple />
+            </div>
+
+    </div>
+    <div>
+        <input type="text" id="imgurl" placeholder="Image URL"/>
+        <button onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
+    </div>
+
+    <div id="results">
 
 
 
-<div>
-    <input type="text" id="imgurl" placeholder="Image URL"/>
-    <button onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
-</div>
+    </div>
 
 
-<div id="tags"></div>
-
-
-
+    <div>
+        <h2>Team</h2>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">SL</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">JA</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">S?</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">AB</a></li>
+        </ul>
+    </div>
 </body>
+
 </html>
