@@ -49,10 +49,10 @@ api.addInputs([computer_img1, computer_img2, glasses_img, coffee_img, kids_img, 
 
 print "\nModel Data:\n "
 res = api.createModel(model_name='civilian', concept_ids=['river', 'pool', 'dribble'])
-print res
+#Debug: print res
 
 model_id = res['model']['id']
-print "\nModel Number: " +  model_id + "\n"
+#Debug: print "\nModel Number: " +  model_id + "\n"
 
 
 api.trainModel(model_id=model_id)
@@ -68,15 +68,9 @@ programmer_img = Image(url=programmer_url)
  
 ## use API to predict
 tags = api.predictModel(model_id=model_id, objs=[civilian_img])
-print "Tags:"
-print  tags
 
-'''api.predictModel(model_id=model_id, objs=[programmer_img])'''
-
-## JSON data 
-'''api.predictColors([img1])
-   api.predictConcepts([img1])
-   api.predictFaces([img3])'''
+#Debug: print "Tags:"
+#Debug: print json.dumps(tags, indent=4, sort_keys=True)
 
 ###################################################################################################################
 ## Recieve images to process
@@ -89,20 +83,60 @@ def hello_world():
     return "hello2"
 
 ## Shannons get Routines
-pool = ["you are waiting for your subway car ", "a small girl chasing her brother accidently shoves you on the tracks ", "the car comes, running you over and causing an immidiete fatality ", "your blood decorates the terminal walls "]
-river = ["you have been snatched by a cannibal ", "she ties you up and flays you beginning with your neck and fingertips ", "she douses your flayed person in alcohol ", "you writhe in agony, and eventually die due to shock and infection "]
-dribble = ["you are going on vacation ", "you go swimming in a river for leisure, and contract a parasite ", "you go to the hospital days later when you notice severe bodily changes ", "it is too late at this time ", "your body is now the breeding ground to parasites that will harvest your organs and muscles until you are no longer able to support yourself "]
+pool = ["you are waiting for your subway car ",
+        "a small girl chasing her brother accidently shoves you on the tracks ",
+        "the car comes, running you over and causing an immidiete fatality ",
+        "your blood decorates the terminal walls "]
+
+river = ["you have been snatched by a cannibal ",
+         "she ties you up and flays you beginning with your neck and fingertips ",
+         "she douses your flayed person in alcohol ",
+         "you writhe in agony, and eventually die due to shock and infection "]
+
+dribble = ["you are going on vacation ",
+           "you go swimming in a river for leisure, and contract a parasite ",
+           "you go to the hospital days later when you notice severe bodily changes ",
+           "it is too late at this time ",
+           "your body is now the breeding ground to parasites that will harvest your organs and muscles until you are no longer able to support yourself!"]
+
+# uses a tag to value dict; extracts largest value and returns the routine
+# associated with the most accurate tag
 
 def getRoutine(tags):
-    for tag in tags 
 
+# Compare name of concepts value using max (n , max (n m))
+# use max prob value concept name as x 
+#    maxValue = lambda x:
+
+    tags['dribble'
+    return {
+        'dribble':dribble,
+        'pool':pool,
+        'river':river
+        } [x]
 
 @app.route('/model')
 def model():
     imgUrl = request.args.get('imgUrl')
     tags = api.predictModel(model_id=model_id, objs=[civilian_img])
 
-    print tags['outputs'][0]['status']
+    
+    value_dict = {}
+    for tag in tags['outputs'][0]['data']['tags']:
+        id = tag['concept']['id']
+        value = tag['value']
+        value_dict[id] = value
 
+
+    routine = getRoutine(value_dict)
+    
+    print "We are showing the value dict"
+    print value_dict
+        
+    #print json.dumps(tags, indent=4, sort_keys=True)
+
+   # routine = getRoutine(tags['tags']['id']
+   # print json.dumps(tags , indent=4, sort_keys=True)
+    
     return json.dumps(pool)
 
