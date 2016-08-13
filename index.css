@@ -11,6 +11,7 @@ $file-upload-size: 300px;
 * {
     margin: 0;
     padding: 0;
+    background-color: black;
     @include box-sizing(border-box);
 }
 .summary < body {
@@ -118,6 +119,7 @@ body{
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 20px;
+    text-align: center;
     color: orange;
     font-family: Titillium Web;
 }
@@ -143,6 +145,9 @@ body{
     font-family: Titillium Web;
     color: orange;
     font-size: 30px;
+.team > ul{
+    font-size: 15px;
+}
 }
 h2{
     color: orange;
@@ -171,6 +176,8 @@ a:hover{
 }
 
 
-
+body{
+    background-color: black;
+}
 
 
