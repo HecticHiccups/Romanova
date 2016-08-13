@@ -84,8 +84,8 @@ def hello_world():
 
 ## Shannons get Routines
 pool = ["you are waiting for your subway car ",
-        "a small girl chasing her brother accidently shoves you on the tracks ",
-        "the car comes, running you over and causing an immidiete fatality ",
+        "a small girl chasing her brother accidently shoves you on to the tracks ",
+        "the car comes, running you over and results in an immediate fatality ",
         "your blood decorates the terminal walls "]
 
 river = ["you have been snatched by a cannibal ",
