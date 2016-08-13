@@ -127,9 +127,8 @@ def getRoutine(tags):
 @app.route('/model')
 def model():
     imgUrl = request.args.get('imgUrl')
-    tags = api.predictModel(model_id=model_id, objs=[civilian_img])
+    tags = api.predictModel(model_id=model_id, objs=[imgUrl])
 
-    
     value_dict = {}
     for tag in tags['outputs'][0]['data']['tags']:
         id = tag['concept']['id']
