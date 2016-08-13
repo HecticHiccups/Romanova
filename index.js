@@ -50,7 +50,7 @@ function postImage(imgurl) {
             'Authorization': 'Bearer ' + accessToken
         }
     }).then(function (r) {
-        
+
         parseResponse(r.data);
     }, function (err) {
         console.log('Sorry, something is wrong: ' + err);
@@ -82,7 +82,7 @@ function run(imgurl) {
     } else {
         console.log("yo");
         postImage(imgurl);
-        
+
     }
 }
 
@@ -94,7 +94,7 @@ function run2(imgurl) {
         // [a,b,c]
         // {tags:[a,b,c]}
         str.split(',')
-        
+
 $(document).ready(function(){
         var list = "";
         for(i=0; i<games.length; i++){
@@ -103,7 +103,7 @@ $(document).ready(function(){
     $("#taglist").append(list);
 
 });
-        
-    
+
+
     })
 }

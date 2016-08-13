@@ -21,8 +21,6 @@ $file-upload-size: 300px;
 }
 #Filetitle {
     font-size: 30px;
-    font-weight: normal;
-    text-transform: uppercase;
     font-family: Titillium Web;
     color: orange;
 }
@@ -132,7 +130,11 @@ p{
     text-align: center;
     font-size: 65px;
 }
-
+.team > h1{
+    font-family: Titillium Web;
+    color: orange;
+    font-size: 30px;
+}
 h2{
     color: orange;
     font-size:30px;
