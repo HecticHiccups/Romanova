@@ -92,5 +92,8 @@ def hello_world():
 @app.route('/model')
 def model():
     imgUrl = request.args.get('imgUrl')
+    if (imgUrl != ""):
+        tags = api.predictModel(model_id=model_id, objs=[imgURL])
+        j = json.loads(tags)
     
-    return "hello: " + imgUrl + " \. see!"
+    return j['tags']
