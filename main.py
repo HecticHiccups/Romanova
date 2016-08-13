@@ -108,12 +108,21 @@ def getRoutine(tags):
 # use max prob value concept name as x 
 #    maxValue = lambda x:
 
-    tags['dribble'
-    return {
-        'dribble':dribble,
-        'pool':pool,
-        'river':river
-        } [x]
+    routine = None
+    max = None
+    
+    for id in tags:
+        if tags[id] > max:
+            max = id
+            
+    if max == 'pool':
+        routine = pool
+    if max == 'river':
+        routine = river
+    if max == 'dribble':
+        routine = dribble
+
+    return routine
 
 @app.route('/model')
 def model():
