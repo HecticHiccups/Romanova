@@ -100,7 +100,25 @@ function run2(imgurl) {
             list +="<li>"+result[i]+"</li>";
             }
         $("#taglist").append(list);
+<<<<<<< HEAD
     
+=======
+
+    //})
+=======
+        str.split(',')
+
+$(document).ready(function(){
+        var list = "";
+        for(i=0; i<games.length; i++){
+        list +="<li>"+games[i]+"</li>";
+        }
+    $("#taglist").append(list);
+
+});
+
+
+>>>>>>> c643d65d570009ec9c8d641a5c531c854486ac74
     })
 
 }

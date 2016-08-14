@@ -87,13 +87,11 @@ function run(imgurl) {
 }
 */
 function run2(imgurl) {
-    //axios.get("/model?imgUrl="+imgurl)
-    //.then(function(result) {
+    axios.get("/model?imgUrl="+imgurl)
+    .then(function(result) {
         // a, b, c
         // [a,b,c]
         // {tags:[a,b,c]}
-<<<<<<< HEAD
-        result = ["a", "b", "c"]
         console.log(result)
         var list = "";
         for(i=0; i < result.length; i++){
@@ -101,20 +99,5 @@ function run2(imgurl) {
             }
         $("#taglist").append(list);
     
-    //})
-=======
-        str.split(',')
-
-$(document).ready(function(){
-        var list = "";
-        for(i=0; i<games.length; i++){
-        list +="<li>"+games[i]+"</li>";
-        }
-    $("#taglist").append(list);
-
-});
-
-
     })
->>>>>>> 9203fb54855e805b0f6fc72b32495c2ef8608b19
 }
