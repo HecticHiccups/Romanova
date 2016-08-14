@@ -53,10 +53,10 @@ res = api.createModel(model_name='civilian', concept_ids=['river', 'pool', 'drib
 
 Take a look at the [Clarifai API](https://developer.clarifai.com/guide/)
 ## Our Technologies Stack
-*Flask <br/>
-*Python <br/>
-*JavaScript <br/>
-*JQuery <br />
+**Flask <br/>
+**Python <br/>
+**JavaScript <br/>
+**JQuery <br />
 
 ## Team
 **Backend** : Jonathan Portorreal <br />
