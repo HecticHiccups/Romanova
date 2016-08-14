@@ -2,6 +2,7 @@
 A 12 hour hackathon in teams of four. We were given the theme of Machines vs Humanity where we develop applications that help bring the apocolopyse of Artificially Intelligent Robots.
 Romanova is an AI-based web app that when given a picture selects humans to kill, but if the humans are programmers they get to live.
 
+![GitHub Logo](app/static/images/Romanova.png)
 ## Code Example
 Using the Clarifai API we were able to manipulate the JSON file, by using the tags to distinguish what kind of model an image is based on the models we've already trained.
 
@@ -53,10 +54,10 @@ res = api.createModel(model_name='civilian', concept_ids=['river', 'pool', 'drib
 
 Take a look at the [Clarifai API](https://developer.clarifai.com/guide/)
 ## Our Technologies Stack
-**Flask <br/>
-**Python <br/>
-**JavaScript <br/>
-**JQuery <br />
+Flask <br/>
+Python <br/>
+JavaScript <br/>
+JQuery <br/>
 
 ## Team
 **Backend** : Jonathan Portorreal <br />
