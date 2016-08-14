@@ -68,5 +68,5 @@ JQuery <br/>
 ## Team
 **Backend** : Jonathan Portorreal <br />
 **Backend** : Shannon C. O'Connor <br />
-**Frontend** : Anthony Beltran <br />
+**Frontend** : Anthony Beltran <br />
 **Fullstack** : Jesus
