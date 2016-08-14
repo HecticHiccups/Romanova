@@ -102,7 +102,7 @@ programmer = ["You're pretty cool!"]
 # uses a tag to value dict; extracts largest value and returns the routine
 # associated with the most accurate tag
 
-def getRoutine(tags):
+def get_routine(tags):
 
 # Compare name of concepts value using max (n , max (n m))
 # use max prob value concept name as x 
@@ -139,7 +139,7 @@ def model():
         value = tag['value']
         value_dict[id] = value
 
-    routine = getRoutine(value_dict)
+    routine = get_routine(value_dict)
     
     print "We are showing the value dict"
     print value_dict
