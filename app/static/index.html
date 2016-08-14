@@ -2,15 +2,29 @@
 <html>
 
 <head>
+  <title>Romanova</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+ <script type="text/javascript" src="keys.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+=======
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Romanova</title>
     <link rel="stylesheet" href="index.css">
+
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600|Orbitron:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="keys.js"></script>
     <script type="text/javascript" src="index.js"></script>
-
 
 </head>
 
@@ -26,6 +40,18 @@
         </div>
     </div>
 
+    <div class="description">
+        <h1>
+            Description
+        </h1>
+        <p>
+            Romanova is a web app that accepts an image of a person and uses the Clarafai API to detect the level of threat the person may pose to the evil AI to decide wheteher they may be allowed to live. Using personalized tags it determines a creative horror movie-worthy scenario in which said person meets their demise.
+        </p>
+
+        <p>
+            *Spoiler* Romanova has a sweet spot for programmers!
+        </p>
+    </div>
 
     <div class="summary">
         <h1 id="Filetitle">Upload Candidate</h1>
@@ -40,6 +66,11 @@
     <input type="text" id="imgurl" placeholder="Image URL"/>
     <button onclick="run2(document.getElementById('imgurl').value)">Get tags!</button>
 </div>
+    </div>
+    <div>
+        <input type="text" id="imgurl" placeholder="Image URL"/>
+        <button onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
+    </div>
 
     <div id="results">
         <p>
@@ -60,10 +91,10 @@
     <div class="team">
         <h1>Team</h1>
         <ul>
-            <li><a href="https://github.com/hitscotty" target="_blank">Jonathan Portoreal</a></li>
-            <li><a href="https://github.com/HecticHiccups" target="_blank">Jesus Arteaga</a></li>
-            <li><a href="https://github.com/A-Beltran" target="_blank">Anthony Beltran</a></li>
-            <li><a href="https://github.com/soconnor129 " target="_blank">Shannon O'Connor</a></li>
+            <li><a href="https://github.com/hitscotty" target="_blank">Jonathan Portoreal <i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/HecticHiccups" target="_blank">Jesus Arteaga <i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/A-Beltran" target="_blank">Anthony Beltran <i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/soconnor129 " target="_blank">Shannon O'Connor <i class="fa fa-github" aria-hidden="true"></i></a></li>
         </ul>
     </div>
 </body>
