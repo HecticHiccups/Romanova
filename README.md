@@ -35,6 +35,7 @@ Here's a more in depth guide
 
 ```shell
 git clone https://github.com/HecticHiccups/Romanova
+cd ~/Romanova/app
 python main.py
 ```
 This should get your Romanova web app up on your localhost, you can test out the functionality by uploading your custom photos from the localhost. To see generated values
