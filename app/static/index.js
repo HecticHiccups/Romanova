@@ -98,7 +98,8 @@ function run2(imgurl) {
         
         var list = "";
         var len  = result["data"].length
-        
+
+        $("#taglist").empty();
         for(i=0; i < len; i++){
             list +="<li>"+result["data"][i] + "</li>";
             }
