@@ -103,6 +103,7 @@ function run2(imgurl) {
             list +="<li>"+result["data"][i] + "</li>";
             }
         $("#taglist").append(list);
+        $("#taglist").hide().fadeIn(3000);
         
     })
 }
