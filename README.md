@@ -35,8 +35,7 @@ Here's a more in depth guide
 
 ```shell
 git clone https://github.com/HecticHiccups/Romanova
-export=FLASK_APP=main.py
-flask run main.py
+python main.py
 ```
 This should get your Romanova web app up on your localhost, you can test out the functionality by uploading your custom photos from the localhost. To see generated values
 open up developer tools for your browser and view objects from console. The output would be an array of Strings to be displayed on screen with uploaded picture in background.
@@ -69,4 +68,4 @@ JQuery <br/>
 **Backend** : Jonathan Portorreal <br />
 **Backend** : Shannon C. O'Connor <br />
 **Frontend** : Anthony Beltran <br />
-**Fullstack** : Jesus
+**Fullstack** : Jesus Arteaga
