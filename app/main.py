@@ -36,12 +36,12 @@ coffee_img   = Image(url='http://www.seriouseats.com/images/2015/10/coffee-shutt
                      labels=['coffee'])
 ######################################## images for a civilian #######################################
 
-kids_img = Image(url='http://ichef.bbci.co.uk/news/660/cpsprodpb/C2DC/production/_89148894_mexico-children.jpg',
+kids_img  = Image(url='http://images.parents.mdpcdn.com/sites/parents.com/files/styles/scale_1500_1500/public/crying-baby-closeup.jpg',
                  labels=['river'])
 teens_img = Image(url='http://www.myrollercoaster.org.au/Portals/0//EasyDNNnews/64/6405_teenagers_r_w.jpg',
-                  labels=['pool'])
+                  labels=['dribble'])
 adults_img = Image(url='http://www.pasw4kids.com/image/100404645.jpg',
-                   labels=['pool'])
+                   labels=['dribble'])
 seniors_img = Image(url='http://theseniorzone.com/wp-content/uploads/2015/02/GroupofSeniors1.jpg',
                     labels=['dribble'])
 
@@ -52,7 +52,7 @@ api.addInputs([computer_img1, computer_img2, glasses_img, coffee_img, kids_img, 
 
 
 #Debug: print "\nModel Data:\n "
-res = api.createModel(model_name='civilian', concept_ids=['river', 'pool', 'dribble'])
+res = api.createModel(model_name='civilian', concept_ids=['river', 'pool', 'dribble', 'computer'])
 #Debug: print res
 
 model_id = res['model']['id']
@@ -76,17 +76,13 @@ programmer_img = Image(url=programmer_url)
 #tags = api.predictModel(model_id=model_id, objs=[civilian_img])
 
 #Debug: print "Tags:"
-#print json.dumps(tags, indent=4, sort_keys=True)
+#Debug: print json.dumps(tags, indent=4, sort_keys=True)
 
 ###################################################################################################################
 ## Recieve images to process
 ## Set up web server
 
 app = Flask(__name__)
-
-#@app.route('/')
-#def hello_world():
-#    return "hello2"
 
 ## Shannons get Routines
 pool = ["you are waiting for your subway car ",
@@ -123,24 +119,19 @@ def get_routine(tags):
 # Compare name of concepts value using max (n , max (n m))
 # use max prob value concept name as x 
 #    maxValue = lambda x:
-
-    routine = None
-    max = None
     
-    for id in tags:
-        if tags[id] > max:
-            max = id
-            
-    if max == 'pool':
-        routine = pool
-    if max == 'river':
-        routine = river
-    if max == 'dribble':
-        routine = dribble
-    if max == 'computer':
-        routine = computer
+    maximum = max(tags, key=tags.get)
 
-    return routine
+    #Debug: print(maximum, tags[maximum])
+
+    routine = {
+        "river":river,
+        "pool":pool,
+        "dribble":dribble,
+        "computer":programmer
+        }
+    
+    return routine[maximum]
 
 @app.route('/model')
 def model():
@@ -148,7 +139,7 @@ def model():
     
     tags = api.predictModel(model_id=model_id, objs=[Image(url=imgUrl)])
 
-  #  print json.dumps(tags, indent=4, sort_keys=True)
+    print json.dumps(tags, indent=4, sort_keys=True)
     value_dict = {}
     for tag in tags['outputs'][0]['data']['tags']:
         id = tag['concept']['id']
@@ -157,11 +148,10 @@ def model():
 
     routine = get_routine(value_dict)
     
-    print "We are showing the value dict"
-    print value_dict
-        
-   # routine = getRoutine(tags['tags']['id']
-   # print json.dumps(tags , indent=4, sort_keys=True)
+   #Debug:  print "We are showing the value dict"
+   #Debug:  print value_dict
+   #Debug: routine = getRoutine(tags['tags']['id']
+   #Debug: print json.dumps(tags , indent=4, sort_keys=True)
     
     return json.dumps(routine)
 
