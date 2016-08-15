@@ -1,6 +1,6 @@
 ## Romanova (General Assembly Hackathon)
-A 12 hour hackathon in teams of four. We were given the theme of Machines vs Hum
-anity where we develop applications that help bring the apocolopyse of Artificia
+A 12 hour hackathon in teams of four. We were given the theme of Machines vs Hum-
+anity where we develop applications that help bring the apocolopyse of Artificia-
 lly Intelligent Robots.
 Romanova is an AI-based web app that when given a picture selects humans to kill
 , but if the humans are programmers they get to live.
