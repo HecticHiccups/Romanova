@@ -11,6 +11,7 @@ $file-upload-size: 300px;
 * {
     margin: 0;
     padding: 0;
+    background-color: black;
     @include box-sizing(border-box);
 }
 .summary < body {
@@ -94,7 +95,7 @@ body{
     top: 0px;
     background:black;
     width: 100%;
-    height: 70px;
+    height: 82px;
 }
 .nav > h3{
     float: left;
@@ -106,11 +107,21 @@ body{
     height: 100%;
 }
 
+.description > h1{
+    text-align: center;
 
-p{
+    color:orange;
+    font-family: Titillium Web;
+}
+
+.description > p{
     font-size: 20px;
-    color: black;
-    font-family: Tahoma;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: orange;
+    font-family: Titillium Web;
 }
 
 .title {
@@ -134,6 +145,9 @@ p{
     font-family: Titillium Web;
     color: orange;
     font-size: 30px;
+.team > ul{
+    font-size: 15px;
+}
 }
 h2{
     color: orange;
@@ -159,6 +173,11 @@ a:visited{
 }
 a:hover{
     color:#00ff00; background-color:transparent; text-decoration:underline}
+}
+
+
+body{
+    background-color: black;
 }
 
 
