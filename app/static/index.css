@@ -1,25 +1,28 @@
-@import "compass/css3";
+@import  compass/css3;
 
-@import url("http://fonts.googleapis.com/css?family=Lato");
-font-family: 'Titillium Web', sans-serif;
-font-family: 'Orbitron', sans-serif;
+@import  "http://fonts.googleapis.com/css?family=Lato";
 
+font-family: 'Titillium Web',sans-serif;
+font-family: Orbitron,sans-serif;
 $background: #e74c3c;
 $file-upload-color: #c0392b;
 $file-upload-size: 300px;
-
 * {
     margin: 0;
     padding: 0;
-    background-color: black;
-    @include box-sizing(border-box);
+}
+
+.summary {
+ border: 100px solid #black;
+ text-align: center;
 }
 .summary < body {
-    font-family: Lato, Arial;
-    color: white;
+    font-family: Lato,Arial;
+    color: #fff;
     padding: 55px 25px;
-    background-color: white;
+    background-color: #fff;
 }
+
 #Filetitle {
     font-size: 30px;
     font-family: Titillium Web;
@@ -29,19 +32,12 @@ $file-upload-size: 300px;
 .custom-file-upload-hidden {
     display: none;
     visibility: hidden;
-    position: absolute;
     left: -9999px;
 }
+
 .custom-file-upload {
-    display: block;
-    width: auto;
-    font-size: 16px;
-    margin-top: 30px;
-    //border: 1px solid #ccc;
-    label {
-        display: block;
-        margin-bottom: 5px;
-    }
+	text-align: center;
+}    
 }
 
 .file-upload-wrapper {
@@ -49,6 +45,7 @@ $file-upload-size: 300px;
     margin-bottom: 5px;
     //border: 1px solid #ccc;
 }
+
 .file-upload-input {
     width: $file-upload-size;
     color: #fff;
@@ -56,13 +53,14 @@ $file-upload-size: 300px;
     padding: 11px 17px;
     border: none;
     background-color: $file-upload-color;
-    @include transition(all 0.2s ease-in);
-    float: left; /* IE 9 Fix */
-    &:hover, &:focus {
-        background-color: darken($file-upload-color, 5);
-        outline: none;
-    }
+    float: left;
+/* IE 9 Fix */
+    &: hover,&:focus {;
+    background-color: darken($file-upload-color,5);
+    outline: none;
+}    
 }
+
 .file-upload-button {
     cursor: pointer;
     display: inline-block;
@@ -72,115 +70,118 @@ $file-upload-size: 300px;
     padding: 11px 20px;
     border: none;
     margin-left: -1px;
-    background-color: darken($file-upload-color, 10);
-    float: left; /* IE 9 Fix */
-    @include transition(all 0.2s ease-in);
-    &:hover {
-        background-color: darken($file-upload-color, 20);
-    }
+    background-color: darken($file-upload-color,10);
+    float: left;
+/* IE 9 Fix */
+    &: hover {;
+    background-color: darken($file-upload-color,20);
+}    
 }
 
-#results{
+#results {
     background-size: 500px;
 }
 
-body{
-    margin: 0px;
-    padding: 0px;
-    background-color: black;
+#results > p {
+	color: maroon;
 }
-.nav{
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.nav {
     color: orange;
     position: fixed;
-    top: 0px;
-    background:black;
+    top: 0;
+    background: #000;
     width: 100%;
-    height: 82px;
+    height: 70px;
 }
-.nav > h3{
+
+.nav > h3 {
     float: left;
     font-family: Titillium Web;
 }
 
-.nav > img{
+.nav > img {
     float: right;
     height: 100%;
 }
 
-.description > h1{
-    text-align: center;
-
-    color:orange;
-    font-family: Titillium Web;
-}
-
-.description > p{
+p {
     font-size: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    text-align: center;
-    color: orange;
-    font-family: Titillium Web;
+    color: #000;
+    font-family: Tahoma;
 }
 
-.title {
-    background-image: url("images/ai.jpg");
+.body {
+    background-image: url(images/ai.jpg);
     background-repeat: no-repeat;
     width: 100%;
     height: 600px;
     background-size: 100%;
-
-
 }
 
-.content > p{
+.content > p {
     font-family: Orbitron;
     padding-top: 100px;
     color: orange;
     text-align: center;
     font-size: 65px;
 }
-.team > h1{
+
+.summary {
+    margin: auto;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.description {
+	color: gray;
+	opacity: 0.45;
+}
+
+.description > p{
+	color: silver;
+}
+
+#taglist {
+	background-color: white;
+}
+.team > h1 {
     font-family: Titillium Web;
     color: orange;
     font-size: 30px;
-.team > ul{
-    font-size: 15px;
-}
-}
-h2{
-    color: orange;
-    font-size:30px;
 }
 
-h3{
+h2 {
+    color: orange;
+    font-size: 30px;
+}
+
+h3 {
     font-size: 25px;
 }
 
-#ham:hover{
-    alertMe()
+#ham:hover {
 }
 
-
-a:link{
-    color:blue;
-    background-color:transparent;
-    text-decoration:none;
-}
-a:visited{
-    color:grey;
-}
-a:hover{
-    color:#00ff00; background-color:transparent; text-decoration:underline}
+a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
 }
 
-
-body{
-    background-color: black;
+a:visited {
+    color: grey;
 }
 
-
-
-
-
+a:hover {
+    color: #0f0;
+    background-color: transparent;
+    text-decoration: underline;
+}    
+}

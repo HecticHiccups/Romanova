@@ -1,4 +1,4 @@
-/* function getCredentials(cb) {
+ function getCredentials(cb) {
     var data = {
         'grant_type': 'client_credentials'
         , 'client_id': CLIENT_ID
@@ -85,7 +85,7 @@ function run(imgurl) {
 
     }
 }
-*/
+
 function run2(imgurl) {
     axios.get("/model?imgUrl="+imgurl)
     .then(function(result) {

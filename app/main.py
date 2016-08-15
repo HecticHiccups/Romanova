@@ -1,6 +1,6 @@
 
 from clarifai.rest import ApiClient, Image
-from flask import Flask, request
+from flask import Flask, request, redirect, url_for, send_from_directory
 import json
 
 
@@ -101,7 +101,15 @@ programmer = ["You're pretty cool!"]
 
 # uses a tag to value dict; extracts largest value and returns the routine
 # associated with the most accurate tag
+# use decorators to link the function to a url
+@app.route('/')
+def home():
+    return app.send_static_file('index.html')  # return a string
 
+@app.route('/<path:path>')
+def welcome(path):
+    return app.send_static_file(path)
+    
 def get_routine(tags):
 
 # Compare name of concepts value using max (n , max (n m))
@@ -148,4 +156,10 @@ def model():
    # print json.dumps(tags , indent=4, sort_keys=True)
     
     return json.dumps(routine)
+
+
+# start the server with the 'run()' method
+if __name__ == '__main__':
+    app.run(debug=True)
+    
 
