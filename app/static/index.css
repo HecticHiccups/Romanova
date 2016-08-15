@@ -78,14 +78,6 @@ $file-upload-size: 300px;
 }    
 }
 
-#results {
-    background-size: 500px;
-}
-
-#results > p {
-	color: maroon;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -133,6 +125,16 @@ p {
     font-size: 65px;
 }
 
+#taglist {
+    background-color: transparent;
+    font-family: Orbitron;
+    font-weight: bold;
+    font-size: 32px;
+    color: orange;
+    text-align: center;
+    list-style-type:none;
+}
+
 .summary {
     margin: auto;
     border: 1px solid #333;
@@ -148,9 +150,6 @@ p {
 	color: silver;
 }
 
-#taglist {
-	background-color: white;
-}
 .team > h1 {
     font-family: Titillium Web;
     color: orange;

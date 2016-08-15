@@ -89,16 +89,20 @@ function run(imgurl) {
 function run2(imgurl) {
     axios.get("/model?imgUrl="+imgurl)
     .then(function(result) {
-        // a, b, c
-        // [a,b,c]
-        // {tags:[a,b,c]}
+        
+        // debugging section
         console.log(result)
+        console.log(result["data"].length)
+        console.log(result["data"][0])
+        /////////////////////////////
+        
         var list = "";
-        for(i=0; i < result.length; i++){
-            list +="<li>"+result[i]+"</li>";
+        var len  = result["data"].length
+        
+        for(i=0; i < len; i++){
+            list +="<li>"+result["data"][i] + "</li>";
             }
         $("#taglist").append(list);
         
-    
     })
 }
