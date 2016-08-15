@@ -1,12 +1,18 @@
 
 from clarifai.rest import ApiClient, Image
 from flask import Flask, request, redirect, url_for, send_from_directory
+from clarifai.client import ClarifaiApi
 import json
 
 
 app_id = "-Vi-qtSkO7YoquYqPUbjR-In9G74Y7TYoAyQsnA5"
 app_secret = "VaVyBbyvmnpoyvOehbDjsnh284T7Nx751LkSVd5H"
 
+
+## API Client
+clarifai_api = ClarifaiApi()
+
+####################################################################################################
 
 ## create our endpoint
 print "Recieving access token:\n "
@@ -45,12 +51,14 @@ seniors_img = Image(url='http://theseniorzone.com/wp-content/uploads/2015/02/Gro
 api.addInputs([computer_img1, computer_img2, glasses_img, coffee_img, kids_img, teens_img, adults_img, seniors_img])
 
 
-print "\nModel Data:\n "
+#Debug: print "\nModel Data:\n "
 res = api.createModel(model_name='civilian', concept_ids=['river', 'pool', 'dribble'])
 #Debug: print res
 
 model_id = res['model']['id']
-print "\nModel Number: " +  model_id + "\n"
+
+
+##Debug: print "\nModel Number: " +  model_id + "\n"
 
 
 api.trainModel(model_id=model_id)
