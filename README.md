@@ -28,8 +28,8 @@ def model():
 ```
 Here's a more in depth guide
 [quickstart](http://flask.pocoo.org/docs/0.11/quickstart/) <br/>
-For the Web Developer Guide <br/>
-[WebClarifai](http://blog.clarifai.com/a-copy-and-paste-guide-to-your-first-api-project-with-clarifai/#.V7Ifvo7TWYX)</br>
+Web Developer Guide: 
+[Web Guide](http://blog.clarifai.com/a-copy-and-paste-guide-to-your-first-api-project-with-clarifai/#.V7Ifvo7TWYX)</br>
 ## Installation and Testing
 
 ```shell
