@@ -26,8 +26,8 @@ def model():
 
     return json.dumps(routine)
 ```
-Here's a more in depth guide
-[quickstart](http://flask.pocoo.org/docs/0.11/quickstart/) <br/>
+Here's a more in depth guide:
+[Quickstart](http://flask.pocoo.org/docs/0.11/quickstart/) <br/>
 Web Developer Guide: 
 [Web Guide](http://blog.clarifai.com/a-copy-and-paste-guide-to-your-first-api-project-with-clarifai/#.V7Ifvo7TWYX)</br>
 ## Installation and Testing
