@@ -141,7 +141,10 @@ p {
     position: relative;
     object-fit: contain;
     opacity: 0.5;
-   
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+
     /* center the image */
     top: 50%;
     left: 50%;
@@ -167,11 +170,23 @@ p {
 
 }
 
-.image img:hover{
+/* img animations */
 
-    opacity: 1;
+.image:hover{
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
 }
 
+.image img:hover{
+    opacity: 1; 
+}
+
+.image img:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+
+/* end of image animations */
 
 @media screen and (orientation: portrait) {
     img.ri { max-width: 90%; }
