@@ -71,7 +71,7 @@ function parseResponse(resp) {
 }
 
 
-function run(imgurl) {
+function run2(imgurl) {
     console.log("hi");
     if (Math.floor(Date.now() / 1000) - localStorage.getItem('tokenTimeStamp') > 86400 || localStorage.getItem('accessToken') === null) {
         console.log("sup");
@@ -86,15 +86,18 @@ function run(imgurl) {
     }
 }
 
-function run2(imgurl) {
+
+function run(imgurl) {
     axios.get("/model?imgUrl="+imgurl)
     .then(function(result) {
-        
+
+            
         // debugging section
         console.log(result)
         console.log(result["data"].length)
         console.log(result["data"][0])
         /////////////////////////////
+        $("#imgb").attr("src",imgurl);
         
         var list = "";
         var len  = result["data"].length
