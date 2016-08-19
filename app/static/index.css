@@ -5,12 +5,17 @@
 font-family: 'Titillium Web',sans-serif;
 font-family: Orbitron,sans-serif;
 
+
+/*
+ * ==========================================================================
+ * Main Section
+ * ==========================================================================
+ */
+
 * {
     margin: 0;
     padding: 0;
 }
-
-/* main section */
 
 body {
     background-image: url(images/ai.jpg);
@@ -60,6 +65,7 @@ p {
   transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
   position:absolute;
 }
+
 .info {
   width:60%;
   height:60%;
@@ -74,6 +80,7 @@ p {
   z-index:19;
   transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
 }
+
 .camera {
   width:60%;
   height:60%;
@@ -210,7 +217,6 @@ p {
     padding-bottom: 20px;
 }
 
-
 .tagcontainer {
     display: table;
     width:100;
@@ -231,83 +237,123 @@ p {
     text-align: center;
     list-style-type:none;
     vertical-align: middle;
-    
 }
 
-#taglist ol li {
+#taglist ul li {
     list-style-type:none;
 }
 
-
-/* group section */
+/* ==========================================================================
+ * Team Section
+ * ==========================================================================
+ */
 
 section#group {
-    border: 5px dotted black;
     width: 100%;
     height: 100vh;
+    background: white;
+    opacity: 0.9;
+    
 }
 
 section#group .nav {
+    top: 0;
     width: 100%;
     height: 70px;
-    border: 10px solid black;
+    color: orange;
+    background: #000;
     text-align: center;
+    padding: 0 0;
 }
 
-
-
-section#group .summary {
- border: 100px solid #black;
- text-align: center;
-}
-.summary < body {
-    font-family: Lato,Arial;
-    color: #fff;
-    padding: 55px 25px;
-    background-color: #fff;
+section#group .nav img {
+    width: 5em;
+    position: relative;
+    overflow: visible;
+    float: right;
+    height: 100%;   
 }
 
-
-.description {
-	color: gray;
-	opacity: 0.45;
-}
-
-.description > p{
-	color: silver;
-}
-
-.team > h1 {
+section#group .nav h3 { 
+    float: right;
     font-family: Titillium Web;
+}
+
+
+section#group .contributers {
+    border: 10px dotted #black;
+    text-align: center;
     color: orange;
-    font-size: 30px;
+    display: table;
+    margin: 0 auto;
 }
 
-h2 {
+section#group .contributers h1 {
+    font-family: Tahoma;
     color: orange;
-    font-size: 30px;
+    font-size: 50px;
 }
 
-h3 {
-    font-size: 25px;
+section#group .contributers ul {
+    padding-top: 25%;
+}
+section#group .contributers ul li {
+    display: inline;
+    padding: 20px;
+    list-style-type: none;
 }
 
-#ham:hover {
-}
-
-a:link {
+section#group a:link {
     color: blue;
+    font-size: 20px;
     background-color: transparent;
     text-decoration: none;
 }
 
-a:visited {
+section#group a:visited {
     color: grey;
+    text-decoration: none;
 }
 
-a:hover {
-    color: #0f0;
+section#group a:hover {
+    color: orange;
     background-color: transparent;
-    text-decoration: underline;
-}    
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+ * Description Section
+ * ==========================================================================
+ */
+
+section#moreInfo {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0.9;
+}
+
+section#moreInfo .infoPage {
+    margin-right: 50px;
+    margin-left: 50px;
+    border: 1px solid black;
+    position: relative;
+    top: 20em;
+    text-indent: 50px;
+    text-align: justify;
+}
+
+section#moreInfo .infoPage p {
+    color: orange;
+    text-align:left;
+    font-size: 18px;
+}
+
+section#moreInfo  .spoiler p {
+    position: relative;
+    color: orange;
+    text-align: center;
+    font-size: 18px;
+    top: 20em;
 }
