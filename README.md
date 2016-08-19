@@ -4,7 +4,7 @@ where we develop applications that help bring the apocolopyse of Artificially In
 Romanova is an AI-based web app that when given a picture selects humans to kill
 , but if the humans are programmers they get to live.
 
-![](app/static/images/Romanova.png)
+![](static/images/Romanova.png)
 ## Code Example
 Using the Clarifai API we were able to manipulate the JSON file, by using the tags
 to distinguish what kind of model an image is based on the models we've already trained.
