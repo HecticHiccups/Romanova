@@ -25,25 +25,60 @@
     </script>
     <script src="index.js" type="text/javascript">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <link href=
+    "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet">
+    <link href=
+    "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel=
+    "stylesheet">
 </head>
 
 <body>
-    <div class="nav">
-    <h3>#AI Hacks</h3>
-    <img src="images/leg-ham.jpg">
+    <!-- menu -->
+
+
+    <div class="menu">
+        <div class="team" onClick="window.location='#group'">
+            <i class="fa fa-user fa-2x"></i>
+        </div>
+
+
+        <div class="info">
+            <i class="fa fa-graduation-cap fa-2x"></i>
+        </div>
+
+
+        <div class="camera" style="font-size:2em;">
+            <i class="glyphicon glyphicon-camera"></i>
+        </div>
+
+
+        <div class="api" style="font-size:2em;">
+            <i class="glyphicon glyphicon-eye-open"></i>
+        </div>
+
+
+        <div class="main">
+            <i class="fa fa-home fa-3x"></i>
+        </div>
     </div>
 
+    <!-- menu -->
+
+    <!--
+
+    -->
 
     <div class="body">
+        <p class="title">ROMANOVA</p>
 
-            <p class="title">ROMANOVA</p>
 
-
-        <div class="image">
-          <img id="imgb" src="images/eye.png"/>
+        <div class="image"><img id="imgb" src="images/eye.png">
         </div>
+
 
         <div class="upload">
             <div>
@@ -53,30 +88,28 @@
             </div>
         </div>
 
+
+        <div class="tagcontainer">
         <div id="taglist">
-           <ol> </ol>
+
+          <ol>
+            <li> Romanova's Eye Needs More Human Soul's </li>
+          </ol>
+
+        </div>
         </div>
     </div>
 
+    <!-- team -->
+    <section id="group">
 
-    <div class="description">
-        <h1>Description</h1>
-
-
-        <p>Romanova is a web app that accepts an image of a person and uses the
-        Clarafai API to detect the level of threat the person may pose to the
-        evil AI to decide whether they may be allowed to live. Using
-        personalized tags it determines a creative horror movie-worthy scenario
-        in which said person meets their demise.</p>
-
-
-        <p>*Spoiler* Romanova has a sweet spot for programmers!</p>
+    <div class="nav">
+      <h3>#AI Hacks</h3>
+      <img src="images/leg-ham.jpg">
     </div>
 
-
-    <div class="summary">
+      <div class="summary">
         <h1>Team</h1>
-
 
         <ul>
             <li>
@@ -105,5 +138,36 @@
             </li>
         </ul>
     </div>
+
+
+    </section>
+
+    <!-- description -->
+      <section id="moreInfo">
+
+
+      </section>
+
+    <!-- camera option -->
+
+
+
+
+    <!-- Scroll vs New page? -->
+    <!--
+    <div class="description">
+        <h1>Description</h1>
+
+
+        <p>Romanova is a web app that accepts an image of a person and uses the
+        Clarafai API to detect the level of threat the person may pose to the
+        evil AI to decide whether they may be allowed to live. Using
+        personalized tags it determines a creative horror movie-worthy scenario
+        in which said person meets their demise.</p>
+
+
+        <p>*Spoiler* Romanova has a sweet spot for programmers!</p>
+    </div>
+-->
 </body>
 </html>
