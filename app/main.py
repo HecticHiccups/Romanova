@@ -15,7 +15,7 @@ clarifai_api = ClarifaiApi()
 ####################################################################################################
 
 ## create our endpoint
-print "Recieving access token:\n "
+##Debug: print "Recieving access token:\n "
 api = ApiClient(client_id=app_id, client_secret=app_secret)
 ######################################## sample images for debuggin  #################################
 img1 = Image(url='https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/cat-adult-landing-hero.ashx',
@@ -139,7 +139,7 @@ def model():
     
     tags = api.predictModel(model_id=model_id, objs=[Image(url=imgUrl)])
 
-    print json.dumps(tags, indent=4, sort_keys=True)
+    ##Debug: print json.dumps(tags, indent=4, sort_keys=True)
     value_dict = {}
     for tag in tags['outputs'][0]['data']['tags']:
         id = tag['concept']['id']
