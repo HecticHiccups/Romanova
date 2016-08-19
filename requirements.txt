@@ -3,7 +3,7 @@ Flask==0.11.1
 Flask-GoogleMaps==0.2.0
 gunicorn==19.6.0
 itsdangerous==0.24
-Jinja==2.7.3
+Jinja2==2.7.3
 MarkupSafe==0.23
 Werkzeug==0.10.1
 
